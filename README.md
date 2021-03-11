@@ -9,7 +9,7 @@ During the registration process the app draws one pokemon from `https://pokeapi.
 - name
 - weight
 
-You can also get information about any pokemon using endpoint `pokemon/:id`
+You can also get information about any pokemon using endpoint `pokemon/{id}`
 
 ## Technologies
   - Node.js + Express + TypeScript 
