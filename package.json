@@ -1,0 +1,26 @@
+{
+  "name": "poke-api",
+  "version": "1.0.0",
+  "description": "Poke Api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LukaszUrb/PokeAPI"
+  },
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
