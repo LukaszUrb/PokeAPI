@@ -5,8 +5,8 @@ services:
     env_file:
       - .env
     image: mongo
-    ports:
-      - '27017:27017'
+    # ports:
+    #   - '27017:27017'
     restart: unless-stopped
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
@@ -23,6 +23,21 @@ services:
       - .env
     image: redis:alpine
     restart: unless-stopped
+    # ports:
+    #   - '6379:6379'
+    command: ['--requirepass "${REDIS_PASSWORD}"']
+
+  api:
+    build:
+      context: ../
+      dockerfile: ./docker/api.Dockerfile
+    restart: unless-stopped
+    user: 1000:1000
+    depends_on:
+      - db
+      - cache
+    links:
+      - db
+      - cache
     ports:
-      - '6379:6379'
-    command: ['--requirepass "${REDIS_PASSWORD}"'] 
+      - '3000:3000'
