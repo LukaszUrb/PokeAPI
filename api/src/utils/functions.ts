@@ -13,3 +13,7 @@ export function toNumber(data: string,): string | number {
 export function randomFromRange(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+export function capitalize(data: string,): string {
+    return data.charAt(0).toUpperCase() + data.slice(1);
+}
