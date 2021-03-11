@@ -8,6 +8,10 @@
   },
   "main": "index.js",
   "scripts": {
+    "up": "mkdir -p data && cd ./docker && docker-compose up -d",
+    "stop": "cd ./docker && docker-compose stop",
+    "down": "cd ./docker && docker-compose down",
+    "restart": "cd ./docker && docker-compose down && docker-compose up -d",
     "commit": "git-cz"
   },
   "keywords": [],
