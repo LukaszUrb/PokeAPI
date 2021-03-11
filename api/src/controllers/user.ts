@@ -19,7 +19,7 @@ export const registerController: RequestHandler = async (req, res, next) => {
         name
     });
 
-    logIn(req, user.id);
+    logIn(req, user.id, user.pokeId);
 
     return res.json({ message: `The account for ${user.email} has been created. Now you are logged in!` });
 };
@@ -33,7 +33,7 @@ export const loginController: RequestHandler = async (req, res) => {
 
     if (!await user?.matchesPassword(password)) throw new Unauthorized("Incorrect email or password.");
 
-    logIn(req, user.id);
+    logIn(req, user.id, user.pokeId);
 
     res.json({ message: "OK" });
 };

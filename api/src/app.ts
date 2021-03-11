@@ -2,7 +2,7 @@ import express, { Express } from "express";
 import session, { Store } from "express-session";
 import { SESSION_OPTIONS } from "./config";
 import { active, notFound, serverError } from "./middleware";
-import { homeRoute, userRoute } from "./routes";
+import { homeRoute, pokemonRoute, userRoute } from "./routes";
 
 export const createApp = (store: Store): Express => {
     const app = express();
@@ -12,7 +12,8 @@ export const createApp = (store: Store): Express => {
 
     app.use("/", homeRoute);
     app.use("/user", userRoute);
-    
+    app.use("/pokemon", pokemonRoute);
+
     app.use(notFound);
     app.use(serverError);
 

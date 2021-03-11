@@ -3,9 +3,10 @@ import { SESSION_NAME } from "./config";
 
 export const isLoggedIn = (req: Request): boolean => !!req.session.userId;
 
-export const logIn = (req: Request, userId: string): void => {
+export const logIn = (req: Request, userId: string, pokeId: number): void => {
     req.session.userId = userId;
     req.session.createdAt = Date.now();
+    req.session.pokeId = pokeId;
 };
 
 export const logOut = (req: Request, res: Response): Promise<void> =>
