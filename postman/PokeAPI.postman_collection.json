@@ -157,13 +157,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/pokemon/me",
+					"raw": "{{url}}/pokemon/5",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"pokemon",
-						"me"
+						"5"
 					]
 				}
 			},
