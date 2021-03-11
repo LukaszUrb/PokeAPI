@@ -13,4 +13,4 @@ mongo -- "$MONGO_INITDB_DATABASE" <<EOF
     "createdAt" : new Date(),
     "updatedAt" : new Date()
 })
-EOF 
+EOF
