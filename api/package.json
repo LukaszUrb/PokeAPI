@@ -1,7 +1,7 @@
 {
-  "name": "star-wars-api",
+  "name": "poke-api",
   "version": "1.0.0",
-  "description": "Star Wars Api",
+  "description": "Poke Api",
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist",

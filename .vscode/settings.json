@@ -17,6 +17,7 @@
         "*.yml"
     ],
     "cSpell.words": [
-        "MILLISEC"
+        "MILLISEC",
+        "mongodb"
     ]
 }
