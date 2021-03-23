@@ -66,13 +66,13 @@ curl localhost:3000/ --cookie \
 #### REGISTER
 ```sh
 curl -v -X POST localhost:3000/user/register -H 'Content-Type: application/json' -d \
-'{"name":"test", "email":"lucas@test.com","password":"Password123","passwordConfirmation":"Password123"}'
+'{"name":"...", "email":"...@...","password":"...","passwordConfirmation":"..."}'
 ```
 
 #### LOGIN
 ```sh
 curl -v -X POST localhost:3000/user/login -H 'Content-Type: application/json' -d \
-'{"email":"lucas@test.com","password":"Password123"}'
+'{"email":"...@...","password":"..."}'
 ```
 
 #### LOGOUT
